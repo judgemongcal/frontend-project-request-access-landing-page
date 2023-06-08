@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@100;700&display=swap');
+
+:root{
+    --neon-main: #54E6AF;
+    --neon-light: #B3FFE2;
+    --gray-light: #C2CBE5;
+    --gray-dark: #5A668A;
+    --gray-darkest: #2C344B;
+    --black-shade: #121725;
+    --white: #ffffff;
+}
+
+*{
+    font-family: 'Chivo', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    background-color: black;
+    background-image: url(assets/mobile/image-host.jpg);
+    background-size: cover;
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    top: -3.5rem;
+    bottom: -5rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Header */
+picture{
+    display: flex;
+    justify-content: center;
+    margin: 3.5rem auto 3.5rem auto;
+}
+
+/* Main Content */
+.content {
+    display: block;
+    justify-content: center;
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
+
+}
+
+.content h1{
+    color: var(--neon-main);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.625rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.content p{
+    color: var(--gray-light);
+    font-size: 1rem;
+    line-height: 1.6rem;
+    text-align: center;
+    margin: 1rem auto -1.75rem auto;
+}
+
+#white{
+    color: var(--white);
+}
+
+/* Platforms */
+
+.platforms{
+    display: flex;
+    justify-content: c;
+    align-items: center;
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
+    box-sizing: border-box;
+}
+
+.platforms img{
+    filter: invert(40%) sepia(14%) saturate(1106%) hue-rotate(187deg) brightness(94%) contrast(86%);
+    width: 3.75rem;
+    height: auto;
+
+}
+
+/* Forms */
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto 1.625rem 4rem 1.625rem;
+}
+
+.error{
+    font-weight: 700;
+    font-size: 0.625rem;
+    color: red;
+    margin: 0.5rem auto 1rem 1.75rem;
+}
+
+.email-input{
+    border: none;
+    padding: 0.7rem;
+    border-radius: 1.25rem;
+    background-color: var(--gray-darkest);
+    height: 1.5rem;
+}
+
+input::placeholder{
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-left: 1rem;
+}
+
+.reqAcc-btn{
+    border: none;
+    padding: 0.7rem;
+    border-radius: 1.25rem;
+    background-color: var(--neon-main);
+    height: 2.5rem;
+}
+
+input[type="submit"]{
+    font-weight: 700;
+    justify-items: center;
+}
