@@ -6,7 +6,7 @@
     --gray-light: #C2CBE5;
     --gray-dark: #5A668A;
     --gray-darkest: #2C344B;
-    --black-shade: #121725;
+    --black-shade: #0b101d;
     --white: #ffffff;
 }
 
@@ -76,7 +76,6 @@ picture{
 
 .platforms{
     display: flex;
-    justify-content: c;
     align-items: center;
     margin-left: 0.9rem;
     margin-right: 0.9rem;
@@ -84,9 +83,10 @@ picture{
 }
 
 .platforms img{
-    filter: invert(40%) sepia(14%) saturate(1106%) hue-rotate(187deg) brightness(94%) contrast(86%);
+    filter: invert(37%) sepia(58%) saturate(303%) hue-rotate(187deg) brightness(92%) contrast(80%);;
     width: 3.75rem;
     height: auto;
+    opacity: 0.7;
 
 }
 
@@ -99,19 +99,39 @@ form {
     margin: auto 1.625rem 4rem 1.625rem;
 }
 
+.email-div{
+    display: flex;
+    flex-direction: column;
+}
+
 .error{
     font-weight: 700;
     font-size: 0.625rem;
     color: red;
     margin: 0.5rem auto 1rem 1.75rem;
+    display: none;
 }
 
 .email-input{
     border: none;
     padding: 0.7rem;
+    padding-right: 0;
     border-radius: 1.25rem;
     background-color: var(--gray-darkest);
     height: 1.5rem;
+}
+
+input[type="email"]{
+    color: white;
+}
+
+input:focus{
+    outline: none;
+    border-color: transparent;
+}
+
+#email{
+    
 }
 
 input::placeholder{
@@ -119,17 +139,252 @@ input::placeholder{
     font-weight: 700;
     letter-spacing: 0.5px;
     padding-left: 1rem;
+    color: var(--white);
+    opacity: 0.5;
+}
+
+
+.btn-div{
+    display: flex;
+    justify-content: center;
 }
 
 .reqAcc-btn{
     border: none;
-    padding: 0.7rem;
-    border-radius: 1.25rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
     background-color: var(--neon-main);
-    height: 2.5rem;
+    height: 3rem;
+}
+
+.reqAcc-btn:hover{
+    background-color: var(--neon-light);
 }
 
 input[type="submit"]{
     font-weight: 700;
     justify-items: center;
+}
+
+
+
+
+/* Media Queries */
+
+
+/* Tablet */
+
+
+@media (min-width: 768px){
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black-shade);
+    background-image: url(assets/tablet/image-host.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+body::after{
+    background-color: transparent;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black-shade);
+    margin-right: 6rem;
+    margin-top: 6rem;
+    margin-bottom: -3.85rem;
+}
+/* Header */
+
+
+header picture{
+    display: flex;
+    justify-content: left;
+    margin: 3.5rem auto 3.25rem 2.5rem;
+}
+
+/* Main Content */
+.content {
+    display: block;
+    justify-content: center;
+    margin: 6rem 6rem auto 2.5rem;
+}
+
+.content h1{
+    font-size: 2.70rem;
+    text-align: left;
+    line-height: 3.5rem;
+}
+
+.content p{
+    font-size: 1.125rem;
+    line-height: 1.8rem;
+    text-align: left;
+    margin: 2rem auto 0 0;
+    width: 82%;
+}
+
+/* Platforms */
+
+.platforms{
+    width: 75%;
+    margin-top: -1.5rem;
+    margin-left: 1.5rem;
+    order: 5;
+
+}
+
+.platforms img{
+    width: 5.75rem;
+    height: auto;
+}
+
+/* Forms */
+
+form {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin: 3rem 1.625rem 0rem 2.5rem;
+    order: 3;
+}
+
+.error{
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    margin-left: 2.15rem;
+}
+
+.email-input{
+    padding: 1rem;
+    border-radius: 1.75rem 0px 0px 1.75rem;
+    padding-right: 8rem;
+}
+
+input::placeholder{
+    font-size: 0.9rem;
+}
+
+
+.reqAcc-btn{
+    border: 0.4rem solid var(--gray-darkest);
+    padding: 0px 1.75rem 0px 1.75rem;
+    border-radius: 1.75rem;
+    height: 3.5rem;
+    margin-left: -1.55rem;
+}
+
+input[type="submit"]{
+    font-size: 0.9rem;
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--black-shade);
+}
+
+.img-pattern{
+    position: absolute;
+    margin: 9.1rem auto 0 2.5rem;
+    padding: 3rem 6rem;
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+}
+
+
+/* Desktop */
+@media (min-width: 1440px){
+
+
+body{
+    background-image: none;
+    
+}
+
+body::after{
+    margin-top: 8.75rem;
+    left: 0rem;
+    width: 100%;
+    height: 50rem;
+    background-image: url(assets/desktop/image-host.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+main{
+    margin-right: 6rem;
+    margin-left: 2.5rem;
+    margin-top: 0;
+    margin-bottom: -3.85rem;
+}
+
+/* Header */
+header{
+    margin-left: 2.5rem;
+}
+header picture{
+    margin: 8rem auto 6.25rem 2.5rem;
+}
+
+/* Main Content */
+
+main{
+    width: 59.5%;
+    margin-bottom: 0rem;
+}
+
+.content {
+    margin: 3.74rem 4rem auto 2.5rem;
+}
+
+.content h1{
+    font-size: 3.25rem;
+    line-height: 4.25rem;
+}
+
+.content p{
+    width: 60%;
+}
+
+/* Platforms */
+
+.platforms{
+    width: 67%;
+}
+
+.platforms img{
+    width: 6.75rem;
+}
+
+/* Forms */
+
+.email-input{
+    margin-right: 0;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: right;
+}
+
+.img-pattern{
+    margin: -6.25rem 0 0 0;
+    padding: 4.60rem 10.25rem;
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+}
+
+
 }
