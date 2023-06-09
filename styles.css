@@ -130,9 +130,6 @@ input:focus{
     border-color: transparent;
 }
 
-#email{
-    
-}
 
 input::placeholder{
     font-size: 0.85rem;
@@ -150,6 +147,7 @@ input::placeholder{
 }
 
 .reqAcc-btn{
+    margin-top: 1rem;
     border: none;
     padding: 1rem;
     border-radius: 1.5rem;
@@ -277,6 +275,7 @@ input::placeholder{
     border-radius: 1.75rem;
     height: 3.5rem;
     margin-left: -1.55rem;
+    margin-top: 0;
 }
 
 input[type="submit"]{
