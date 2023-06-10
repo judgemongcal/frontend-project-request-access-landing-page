@@ -261,11 +261,14 @@ form {
 .email-input{
     padding: 1rem;
     border-radius: 1.75rem 0px 0px 1.75rem;
-    padding-right: 8rem;
+    width: 100%;
+    padding-right: 6rem;
+    padding-left: 1rem;
 }
 
 input::placeholder{
     font-size: 0.9rem;
+    margin-left: 1rem;
 }
 
 
